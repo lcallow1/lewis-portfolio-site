@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lewis Callow</title>
+    <meta
+      name="description"
+      content="IT apprentice building AWS infrastructure in public. Portfolio of cloud engineering projects."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <div class="hero-meta">
+        <span>Portfolio · 2026</span>
+        <span>Lincolnshire, UK</span>
+      </div>
+      <h1 class="hero-name">Lewis Callow</h1>
+      <p class="hero-tagline">
+        IT apprentice building AWS infrastructure in public. Working towards a
+        career in cloud engineering and consultancy.
+      </p>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          <!-- Replace with your own voice. 2-3 sentences max. -->
+          I'm a first-line IT support apprentice at a small MSP in Newark. I
+          spend my evenings learning AWS, Terraform, and Python — and building
+          projects to put what I'm learning into practice.
+        </p>
+        <p>
+          My goal is to grow into a cloud engineer, work in a corporate cloud
+          team, then eventually run my own consultancy.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <h3>Personal portfolio site</h3>
+          <p class="project-description">
+            This site, deployed on AWS using Terraform. S3 for storage,
+            CloudFront for delivery, Route 53 for DNS. Remote state in S3 with
+            DynamoDB locking. CI/CD via GitHub Actions.
+          </p>
+          <ul class="project-tags">
+            <li>AWS</li>
+            <li>Terraform</li>
+            <li>S3</li>
+            <li>CloudFront</li>
+            <li>Route 53</li>
+            <li>GitHub Actions</li>
+          </ul>
+          <ul class="project-links">
+            <li>
+              <a href="https://github.com/lcallow1/lewis-portfolio-site"
+                >GitHub</a
+              >
+            </li>
+            <!-- <li><a href="#">Walkthrough</a></li>  uncomment when Loom recorded -->
+          </ul>
+        </article>
+
+        <!-- Duplicate the <article> above to add more projects later -->
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Cloud</h3>
+            <ul>
+              <li>AWS</li>
+              <li>Microsoft 365 administration</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Infrastructure as Code</h3>
+            <ul>
+              <li>Terraform</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>CI/CD &amp; Tooling</h3>
+            <ul>
+              <li>GitHub Actions</li>
+              <li>Git</li>
+              <li>Docker (learning)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="contact-prompt">Get in touch</p>
+      <ul class="contact-links">
+        <li>
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+        </li>
+        <li><a href="https://github.com/lcallow1">GitHub</a></li>
+        <li><a href="mailto:lewis.fcallow@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer-note">
+        Built with HTML, CSS, and Terraform on AWS.
+        <a href="https://github.com/lcallow1/lewis-portfolio-site"
+          >View source</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

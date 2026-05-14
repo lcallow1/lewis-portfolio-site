@@ -1,0 +1,273 @@
+/* =========================================================================
+   1. Reset & base
+   ========================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* clamp() = min, preferred, max — fluid font sizing */
+  font-size: clamp(15px, 1vw + 12px, 17px);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: #007aff; /* accent colour — change to your taste */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: currentColor;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================================================================
+   2. Nav
+   ========================================================================= */
+
+.site-nav {
+  display: flex;
+  justify-content: center; /* was: space-between */
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.site-nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav-links a {
+  color: #525252;
+  font-size: 0.9rem;
+  border-bottom: none;
+}
+
+.site-nav-links a:hover {
+  color: #1a1a1a;
+}
+
+/* On mobile, hide the links — keep the logo */
+@media (max-width: 600px) {
+  .site-nav-links {
+    display: none;
+  }
+}
+
+/* =========================================================================
+   3. Layout: shared container width
+   ========================================================================= */
+
+.hero,
+main section,
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =========================================================================
+   3. Hero
+   ========================================================================= */
+
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 4rem;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: #525252;
+  max-width: 36rem;
+  margin-top: 2rem;
+}
+
+/* =========================================================================
+   4. Sections
+   ========================================================================= */
+
+main section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid #eee; /* gentle dividers */
+}
+
+main section h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+/* About */
+
+#about p {
+  font-size: 1.1rem;
+  max-width: 36rem;
+}
+
+/* =========================================================================
+   5. Projects
+   ========================================================================= */
+
+.project {
+  margin-bottom: 3rem;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  max-width: 42rem;
+  color: #525252;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.project-tags li {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: #f4f4f4;
+  border-radius: 999px;
+  color: #525252;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* =========================================================================
+   6. Skills
+   ========================================================================= */
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.skill-group h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.skill-group li {
+  padding: 0.25rem 0;
+  color: #1a1a1a;
+}
+
+/* =========================================================================
+   7. Footer
+   ========================================================================= */
+
+footer {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid #eee;
+}
+
+.contact-prompt {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* =========================================================================
+   8. Responsive tweaks
+   ========================================================================= */
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
