@@ -21,6 +21,12 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+provider "aws" {
+  alias  = "us_east_1"
+  region = "us-east-1"
+
+}
+
 module "site" {
   source      = "./modules/static_site"
   bucket_name = var.bucket_name
