@@ -52,17 +52,17 @@
         <article class="project">
           <h3>Personal portfolio site</h3>
           <p class="project-description">
-            This site, deployed on AWS using Terraform. S3 for storage,
-            CloudFront for delivery, Route 53 for DNS. Remote state in S3 with
-            DynamoDB locking. CI/CD via GitHub Actions.
+            This site, deployed on AWS using Terraform. Content stored in a
+            private S3 bucket, served globally over HTTPS via CloudFront with
+            Origin Access Control so the bucket stays private. TLS certificate
+            managed by AWS Certificate Manager. DNS handled by Cloudflare.
+            Terraform state stored remotely in S3 with DynamoDB state locking.
           </p>
           <ul class="project-tags">
             <li>AWS</li>
             <li>Terraform</li>
             <li>S3</li>
             <li>CloudFront</li>
-            <li>Route 53</li>
-            <li>GitHub Actions</li>
           </ul>
           <ul class="project-links">
             <li>
