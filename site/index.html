@@ -6,7 +6,7 @@
     <title>Lewis Callow</title>
     <meta
       name="description"
-      content="IT apprentice building AWS infrastructure in public. Portfolio of cloud engineering projects."
+      content="IT support engineer building cloud and Linux infrastructure in public. Portfolio of projects and write-ups."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -15,6 +15,7 @@
       <ul class="site-nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -22,12 +23,12 @@
     <header class="hero">
       <div class="hero-meta">
         <span>Portfolio · 2026</span>
-        <span>Lincolnshire, UK</span>
+        <span>London, UK</span>
       </div>
       <h1 class="hero-name">Lewis Callow</h1>
       <p class="hero-tagline">
-        IT apprentice building AWS infrastructure in public. Working towards a
-        career in cloud engineering and consultancy.
+        IT support engineer building cloud and Linux infrastructure in public.
+        Working on getting better than yesterday.
       </p>
     </header>
 
@@ -35,19 +36,33 @@
       <section id="about">
         <h2>About</h2>
         <p>
-          <!-- Replace with your own voice. 2-3 sentences max. -->
-          I'm a first-line IT support apprentice at a small MSP in Lincolnshire.
-          I spend my evenings learning AWS, Terraform, and Python — and building
+          I work in 1st and 2nd line support at an MSP in London. I spend my
+          evenings learning Linux currently and building
           projects to put what I'm learning into practice.
-        </p>
-        <p>
-          My goal is to grow into a cloud engineer, work in a corporate cloud
-          team, then eventually run my own consultancy.
         </p>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
+
+        <article class="project">
+          <h3>Linux server hardening</h3>
+          <p class="project-description">
+            An Ubuntu server built from scratch in a Multipass VM, then locked
+            down. A dedicated admin user with sudo, key-only SSH with password
+            and root login disabled, and a UFW firewall that denies all incoming
+            traffic except SSH, HTTP and HTTPS.
+          </p>
+          <ul class="project-tags">
+            <li>Linux</li>
+            <li>Ubuntu</li>
+            <li>SSH</li>
+            <li>UFW</li>
+          </ul>
+          <ul class="project-links">
+            <li><a href="posts/linux-server-hardening.html">Write-up</a></li>
+          </ul>
+        </article>
 
         <article class="project">
           <h3>Personal portfolio site</h3>
@@ -70,53 +85,41 @@
                 >GitHub</a
               >
             </li>
-            <!-- <li><a href="#">Walkthrough</a></li>  uncomment when Loom recorded -->
           </ul>
         </article>
+      </section>
 
-        <!-- Duplicate the <article> above to add more projects later -->
+      <section id="writing">
+        <h2>Writing</h2>
+        <p class="writing-intro">
+          Notes on what I'm building and learning, mostly for my own benefit.
+        </p>
+        <ul class="post-list">
+          <li>
+            <a href="posts/linux-server-hardening.html">
+              <span class="post-list-title">Building and hardening my first Linux server</span>
+              <time class="post-list-date" datetime="2026-09-21">21 Sep 2026</time>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
 
         <div class="skill-groups">
-          <div class="skill-group">
-            <h3>Cloud</h3>
-            <ul>
-              <li>AWS</li>
-              <li>Microsoft 365 administration</li>
-            </ul>
-          </div>
 
           <div class="skill-group">
-            <h3>Infrastructure as Code</h3>
+            <h3>Systems</h3>
             <ul>
-              <li>Terraform</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>CI/CD &amp; Tooling</h3>
-            <ul>
-              <li>GitHub Actions</li>
-              <li>Git</li>
-              <li>Docker (learning)</li>
+              <li>Linux (learning)</li>
             </ul>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer id="contact">
       <p class="contact-prompt">Get in touch</p>
       <ul class="contact-links">
         <li>

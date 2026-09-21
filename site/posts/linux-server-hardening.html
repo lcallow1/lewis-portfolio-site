@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building and hardening my first Linux server · Lewis Callow</title>
+    <meta
+      name="description"
+      content="Creating an Ubuntu VM with Multipass and hardening it with a sudo user, key-only SSH and a firewall. Plus the mistakes I made along the way."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#writing">Writing</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article class="post">
+        <header class="post-header">
+          <a class="post-back" href="../index.html#writing">Lewis Callow</a>
+          <h1 class="post-title">Building and hardening my first Linux server</h1>
+          <p class="post-meta">
+            <time datetime="2026-09-21">21 September 2026</time>
+            <span>Linux project 1, part 1</span>
+          </p>
+        </header>
+
+        <div class="post-body">
+          <p>
+            Tonight I went through steps 1 to 3 of creating a Linux VM with
+            Multipass and hardening it with a firewall and key-only SSH.
+          </p>
+          <p>
+            This is my first project in a series to learn Linux properly, so I
+            can work on real systems.
+          </p>
+
+          <h2>The steps</h2>
+          <ol>
+            <li>
+              <strong>Privileged user creation.</strong> An admin account used
+              for everything from here on.
+            </li>
+            <li>
+              <strong>SSH hardening.</strong> Key-only login, so no password
+              authentication, and root login disabled.
+            </li>
+            <li>
+              <strong>Firewall.</strong> Default deny incoming, allow outgoing,
+              and open up ports 22 (SSH), 80 (HTTP) and 443 (HTTPS).
+            </li>
+          </ol>
+
+          <h2>What I learnt</h2>
+          <ul>
+            <li><code>ls -la</code> shows hidden files.</li>
+            <li><code>su</code> can be used to switch user.</li>
+            <li>
+              <code>chmod</code> is how you set permissions on folders and
+              files. This is especially important because SSH can ignore your
+              key if the permissions are too open.
+            </li>
+          </ul>
+
+          <h2>Mistakes</h2>
+          <ul>
+            <li>
+              <strong>Looking in the wrong place for keys.</strong> I went to
+              <code>/etc/ssh</code> and found the server's host keys. I later
+              found out that host keys prove the server's identity, and user
+              keys prove mine.
+            </li>
+            <li>
+              <strong>Making <code>authorized_keys</code> a folder.</strong> I
+              used <code>mkdir</code> instead of creating a file.
+            </li>
+            <li>
+              <strong>Pasting an incomplete key from my Mac.</strong> I missed
+              out the <code>ssh-rsa</code> at the start of the key.
+            </li>
+            <li>
+              <strong>My sudo wasn't actually working.</strong> I created the
+              user with <code>sudo adduser lewisadm</code>. I then needed
+              <code>sudo usermod -aG sudo lewisadm</code> to add it to the sudo
+              group.
+            </li>
+          </ul>
+
+          <h2>Next</h2>
+          <p>
+            Part two: installing nginx to serve a page, then digging into logs
+            and setting up fail2ban.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer id="contact">
+      <p class="contact-prompt">Get in touch</p>
+      <ul class="contact-links">
+        <li>
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+        </li>
+        <li><a href="https://github.com/lcallow1">GitHub</a></li>
+        <li><a href="mailto:lewis.fcallow@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer-note">
+        Built with HTML, CSS, and Terraform on AWS.
+        <a href="https://github.com/lcallow1/lewis-portfolio-site"
+          >View source</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

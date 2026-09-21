@@ -271,3 +271,146 @@ footer {
     gap: 0.75rem;
   }
 }
+
+/* =========================================================================
+   9. Writing list (homepage)
+   ========================================================================= */
+
+.writing-intro {
+  color: #525252;
+  max-width: 36rem;
+  margin-bottom: 2rem;
+}
+
+.post-list li {
+  border-top: 1px solid #eee;
+}
+
+.post-list li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.post-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  color: #1a1a1a;
+  border-bottom: none;
+}
+
+.post-list-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.post-list a:hover .post-list-title {
+  color: #007aff;
+}
+
+.post-list-date {
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* =========================================================================
+   10. Post page
+   ========================================================================= */
+
+.post {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.post-header {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.post-back {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 3rem;
+}
+
+.post-title {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 48rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.post-body {
+  max-width: 40rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  font-size: 1.1rem;
+}
+
+.post-body h2 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.post-body ul,
+.post-body ol {
+  margin: 0 0 1em;
+  padding-left: 1.25rem;
+}
+
+.post-body ul {
+  list-style: disc;
+}
+
+.post-body ol {
+  list-style: decimal;
+}
+
+.post-body li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.post-body code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: #f4f4f4;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+a:focus-visible {
+  outline: 2px solid #007aff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .post-header {
+    padding-top: 3rem;
+  }
+
+  .post-list a {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .post-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
